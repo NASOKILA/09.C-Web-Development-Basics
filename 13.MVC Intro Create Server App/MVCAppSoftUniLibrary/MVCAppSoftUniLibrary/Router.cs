@@ -7,15 +7,11 @@
 
     public class Router
     {
-        //mojehme da go napravim na statichen klas sus statichna funkciq i da nqma nujda ot instanciq
-
         public void Run(SoftUniLibraryContext context) {
 
             IBooksController booksController = new BooksController(context);
             IAuthorsController authorsController = new AuthorsController(context);
 
-
-            //Logikata na prilojenieto
             while (true)
             {
 
@@ -25,7 +21,6 @@
                 Console.WriteLine("     \"AuthorDetails\"  -  Show author details.");
                 Console.WriteLine("     \"Exit\"  -  Exit the app.");
 
-                //Mojem direktno da podadem dadeni parametri i posle da splitvame !
                 string action = Console.ReadLine();
 
                 switch (action)
@@ -62,6 +57,5 @@
             Console.WriteLine("Bye bye !");
             Environment.Exit(0);
         }
-
     }
 }

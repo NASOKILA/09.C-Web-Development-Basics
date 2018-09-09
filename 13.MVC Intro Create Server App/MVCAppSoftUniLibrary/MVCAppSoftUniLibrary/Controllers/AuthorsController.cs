@@ -31,7 +31,6 @@
             if (author == null)
                 return "No author with that id.";
 
-            //TUK POLZVAME VIEW
             return new DetailsView().Display(author);
         }
     }

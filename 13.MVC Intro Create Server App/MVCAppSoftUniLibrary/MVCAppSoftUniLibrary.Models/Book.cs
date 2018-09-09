@@ -1,9 +1,7 @@
 ﻿namespace MVCAppSoftUniLibrary.Models
 {
-    
     public class Book
     {
-
         public Book()
         {}
 
@@ -15,7 +13,6 @@
 
         public Author Author { get; set; }
 
-        public int AuthorId { get; set; }
-        
+        public int AuthorId { get; set; }    
     }
 }

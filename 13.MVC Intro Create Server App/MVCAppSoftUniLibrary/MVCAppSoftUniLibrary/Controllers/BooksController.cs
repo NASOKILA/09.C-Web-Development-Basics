@@ -26,7 +26,6 @@
             if (books.Count < 1)
                 return "No boos in the database";
 
-            //I tuk polzvame View
             return new AllView().Display(books);
         }
         
@@ -43,7 +42,6 @@
             if (currentBook == null)
                 return "No book with that id.";
 
-            //TUK POLZVAME VIEW
             return new DetailsView().Display(currentBook);
         }
     }

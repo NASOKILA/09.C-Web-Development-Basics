@@ -7,15 +7,11 @@
     {
         static void Main(string[] args)
         {
-
             var context = new SoftUniLibraryContext();
             
-            //Pravim si bazata
             InitializeDatabase(context);
 
-            InitializeRouter(context);
-           
-            
+            InitializeRouter(context);   
         }
 
         private static void InitializeRouter(SoftUniLibraryContext context)
@@ -26,9 +22,7 @@
 
         private static void InitializeDatabase(SoftUniLibraryContext context) {
 
-            context.Database.Migrate();
-            
+            context.Database.Migrate();   
         }
-        
     }
 }
