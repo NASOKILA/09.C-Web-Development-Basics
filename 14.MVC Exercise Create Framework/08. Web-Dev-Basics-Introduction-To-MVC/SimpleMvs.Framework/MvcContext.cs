@@ -1,6 +1,5 @@
 ﻿namespace SimpleMvs.Framework
 {
-    //information about the context 
     public class MvcContext
     {
         private static MvcContext Instance;

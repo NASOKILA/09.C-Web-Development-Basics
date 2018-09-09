@@ -22,5 +22,4 @@ namespace SimpleMvc.App.Views.Users
             return sb.ToString();
         }
     }
-
 }

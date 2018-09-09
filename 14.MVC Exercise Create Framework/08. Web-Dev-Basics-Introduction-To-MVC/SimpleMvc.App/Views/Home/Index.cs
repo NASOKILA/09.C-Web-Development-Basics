@@ -3,7 +3,6 @@ using System.Text;
 
 namespace SimpleMvc.App.Views.Home
 {
-
     public class Index : IRenderable
     {
         public string Render()

@@ -1,7 +1,6 @@
 ﻿
 namespace SimpleMvc.Framework.Controllers
 {
-
     using SimpleMvs.Framework.Controllers;
     using SimpleMvs.Framework.Interfaces;
 

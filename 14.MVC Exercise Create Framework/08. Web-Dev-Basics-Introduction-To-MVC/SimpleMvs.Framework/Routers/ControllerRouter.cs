@@ -12,10 +12,8 @@
     using WebServer.Enums;
     using SimpleMvs.Framework.Interfaces;
 
-    //The main purpose of this class would be to transform the incoming request to a response
     public class ControllerRouter : WebServer.Contracts.IHandleable
     {
-
         private IDictionary<string, string> getParams = new Dictionary<string, string>();
 
         private IDictionary<string, string> postParams = new Dictionary<string, string>();
@@ -28,10 +26,8 @@
 
         private object[] methodParams;
 
-
         public IHttpResponse Handle(IHttpRequest request)
         {
-
             var getTokens =
                     request
                     .UrlParameters;
@@ -44,7 +40,6 @@
                 this.getParams[key] =  value ;
             }
 
-
             var postTokens = request.FormData;
 
             foreach (var item in postTokens)
@@ -55,10 +50,7 @@
                 this.postParams[key] = value;
             }
 
-            
-
             this.requestMethod = request.Method.ToString().ToUpper();
-
 
             string getControllerAndActionTokens =
                     request
@@ -84,20 +76,15 @@
 
             if (actionName == controllerName)
             {
-                //return "Invalid URL";
                 return new NotFoundResponse();
             }
             
-
-            //obtain the method of the controller
             MethodInfo method = this.GetMethod();
             
             if(method == null){
                 return new NotFoundResponse();
             }
 
-
-            //convert the string parameters from getParams or postParams dictionaries to their appropriate type that the method in the controller expects
             IEnumerable<ParameterInfo> parameters = method.GetParameters();
 
             this.methodParams = new object[parameters.Count()];
@@ -157,7 +144,6 @@
             return response;
         }
 
-        //If the method is not annotated with any HttpMethodAttribute and the request method is GET we should return it
         private MethodInfo GetMethod()
         {
             MethodInfo method = null;
@@ -186,8 +172,6 @@
             return method;
         }
 
-
-        //get all methods of the requested controller
         private IEnumerable<MethodInfo> GetSuitableMethods()
         {
             var controller = this.GetController();
@@ -203,26 +187,20 @@
                     .Where(m => m.Name == this.actionName);
         }
 
-
-        //creates an instance of the requested controller 
         private Controller GetController()
         {
-            //vzimame infoto za kontrolera
             var controllerFullQualifieldName = string.Format(
                 "{0}.{1}.{2}, {0}",      
                 MvcContext.Get.AssemblyName,
                 MvcContext.Get.ControllersFolder,
                 this.controllerName);
 
-            //vzimame tiput
             Type type = Type.GetType(controllerFullQualifieldName);
 
-            //proverqvame dali ne e null
             if (type == null) {
                 return null;
             }
 
-            //suzdvame instanciq
             var controller = (Controller)Activator.CreateInstance(type);
 
             return controller;

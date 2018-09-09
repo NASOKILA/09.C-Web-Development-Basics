@@ -29,7 +29,6 @@
                 Password = PasswordUtilities.GenerateHash256(registerUserBindingModel.Password)
             };
             
-            //add user to db
             using (var context = new NotesDbContext())
             {
                 context.Users.Add(user);
@@ -44,7 +43,6 @@
         {
             List<string> allUsersUsernames = null;
 
-            //add user to db
             using (var context = new NotesDbContext())
             {
                 allUsersUsernames = context
@@ -67,7 +65,6 @@
             User user = null;
             List<Note> notes = null;
 
-            //add user to db
             using (var context = new NotesDbContext())
             {
                 user = context
@@ -78,7 +75,6 @@
                     .Notes
                     .Where(n => n.OwnerId == user.Id).ToList();
             }
-
             
             var viewModel = new UserProfileViewModel()
             {
@@ -102,12 +98,11 @@
             
             using (var context = new NotesDbContext())
             {
-                //vzimam usera ot modela
+
                 User user = context
                     .Users
                     .SingleOrDefault(u => u.Id == model.UserId);
 
-                //vzimam beejkata ot modela
                 Note note = new Note
                 {
                     Title = model.Title,
@@ -116,15 +111,12 @@
                     Owner = user
                 };
 
-                //zapazvam beljkata v bazata
                 context.Notes.Add(note);
                 context.SaveChanges();
 
             };
 
-            //vrushtam se pak tuk kato podavam idto na usera
             return Profile(model.UserId);
-        }
-        
+        }   
     }
 }

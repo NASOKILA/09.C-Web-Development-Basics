@@ -1,7 +1,6 @@
 ﻿
 namespace SimpleMvc.App.Controllers
 {
-
     using SimpleMvs.Framework.Controllers;
     using SimpleMvs.Framework.Interfaces;
 
@@ -9,7 +8,6 @@ namespace SimpleMvc.App.Controllers
     {
         public IActionResult Index() {
             return View();
-        }
-        
+        }   
     }
 }
