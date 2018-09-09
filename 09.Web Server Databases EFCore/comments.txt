@@ -1,0 +1,48 @@
+
+Stateless:  kogato sme lognati ostavim nqkakvo sustoqnie i se razlognem, posle pak kato se lognem tova sustoqnie da NE se zapazva.
+ZA TOVA NE TRQBVA DA POLZVAME 'static' NESHTA NIKADE V WEB PRILOJENIQ.
+
+Pri nqkoi igri nqmame server koito da raboti s request i response a imame postoqnna otvorena vruzka mejdu kompiutrite, naricha se socket.
+
+Edin server potoqnno vurti i chaka za zaqvki.
+
+Za baza ni trqbva entity framework i trqbva da go intlirame, vupreki che na momenti pravi gluposti.
+Trqbva da instalirame paketa Microsotf.EntityFrameworkCore no putvo buildvame samiq proekt.
+Posle si pravim DbContext klas koito da raboti s bazata.
+
+Modelite opisvat kakvo shte ima v bazata, te sa nashite danni,
+pravim si user koito shte si ima ime, parola, username.
+
+Dobavqm migracii Add-Migration migrationName V konzolata.
+Posle trqbva da si inicializirame bazata v aplikaciqta, t.e. v ByTheCakeApp.cs faila.
+
+
+SUS ANOTACII SLAGAME VALIDACIQ, VIJ USER KLASA.
+PROMENQME I MALKO V Product Klasa
+I DOBAVQME NOVA MIGRACIQ PREZ KONZOLATA : Add-Migration ValidationMigration
+
+Ako imame forma s POST method no BEZ ACTION ZNACHI Action-a si e na SUSHTOTO MQSTO
+
+
+
+Pri registraciq kriptirame parolata predi da napravim user, hash funkciite za kriptirane
+priemat stringove s razlichni duljini obache vrushtat string s ednakkva duljina.
+V bazata zapazvame usera suzdaden s tazi kriptirana parola.
+
+VAJNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!!!!!!!!!!!!!!!!!!!!!!
+VALIDACIITE ZADULJITELNO SE PRAVQT V (BACKENDA, WEBSERVERA), NIKOGA NA FRONTENDA ZASHTOTO LESNO MOJEM DA Q MAHNEM. 
+
+PO DOBRE DA IMAME VIEWMODELI OT KOLKOTO PROSTO (string name, string price) V KONTOLLERITE.
+
+
+
+
+
+
+
+
+
+
+
+
+
