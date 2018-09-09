@@ -1,11 +1,9 @@
-﻿
-<header>
+﻿<header>
     <nav class="navbar navbar-expand-md navbar-light bg-warning">
         <div class="container">
             <a class="navbar-brand" href="/">SoftUni Store</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -29,7 +27,6 @@
     </nav>
 </header>
 
-<!--Body of the store-->
 <main>
     <div class="container">
         <div class="row">
@@ -38,18 +35,21 @@
                 <h1 class="display-3">Mass Effect Andromeda</h1>
                 <br />
 
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{{videoUrl}}}" frameborder="0"
-                        allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{{videoUrl}}}" frameborder="0" allowfullscreen></iframe>
 
                 <br />
                 <br />
 
                 <p>{{{description}}}</p>
 
-                <p><strong>Price</strong> - {{{price}}} &euro;</p>
-                <p><strong>Size</strong> - {{{size}}} GB</p>
-                <p><strong>Release Date</strong> - {{{date}}}</p>
-                <p><strong>Creator</strong> - {{{creator}}}</p>
+                <p>
+                    <strong>Price</strong> - {{{price}}} &euro;</p>
+                <p>
+                    <strong>Size</strong> - {{{size}}} GB</p>
+                <p>
+                    <strong>Release Date</strong> - {{{date}}}</p>
+                <p>
+                    <strong>Creator</strong> - {{{creator}}}</p>
 
                 <a class="btn btn-outline-primary" href="/">Back</a>
                 <a class="btn btn-primary" href="/buy/{{{id}}}">Buy</a>
@@ -61,4 +61,3 @@
         </div>
     </div>
 </main>
-

@@ -41,8 +41,6 @@
                 shoppingCart.Orders.Add(cake);
             }
 
-
-
             var redirectUrl = "/search";
             const string searchTermKey = "searchTerm";
 
@@ -64,14 +62,11 @@
                 this.ViewData["totalCost"] = "0.00";
             }
             else
-            {
-
-                
+            { 
                 List<int> itemsIds = shoppingCart
                     .Orders
                     .Select(i => i.Id).ToList();
 
-                //durpame produktite ot bazata i gi slagame tuka
                 List<Product> itemsInCart = new List<Product>();
                 
                 foreach (int id in itemsIds)
@@ -98,12 +93,8 @@
 
         public IHttpResponse FinishOrder(IHttpRequest req)
         {
-            //Register order in the database
-
-
             var currentUserId = req.Session.Get<int>(SessionStore.CurrentUserKey);
 
-            //purvo slagame ordera
             using (var context = new ByTheCakeContext())
             {
                 User currentUser = context.Users.Find(currentUserId);
@@ -121,9 +112,7 @@
 
                     productItems.Add(product);
                 }
-              
-
-                //Suzdavam nov order
+         
                 Order order = new Order
                 {
                     DateOfCreation = DateTime.UtcNow,
@@ -133,7 +122,6 @@
                 
                 context.Orders.Add(order);
                 
-                //za vseki produkt v karta suzdavam nov ProductOrder
                 foreach (int id in itemsIds)
                 {
                     Product item = context.Products.Find(id);
@@ -151,9 +139,6 @@
                 context.SaveChanges(); 
                 
             }
-
-
-
 
             req.Session.Get<ShoppingCart>(ShoppingCart.SessionKey).Orders.Clear();
 

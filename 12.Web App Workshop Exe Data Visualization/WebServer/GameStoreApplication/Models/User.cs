@@ -5,7 +5,6 @@
 
     public class User
     {
-
         public User()
         {
             this.Games = new List<UserGame>();

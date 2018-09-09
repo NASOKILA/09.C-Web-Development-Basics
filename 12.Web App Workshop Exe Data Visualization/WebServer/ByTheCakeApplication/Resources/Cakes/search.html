@@ -1,11 +1,11 @@
-﻿
-<br />
+﻿<br />
 <br />
 <form method="get">
 
     <div class="form-row align-items-center">
         <div class="col-sm-3">
-            <input type="text" name="searchTerm" placeholder="Search Cakes..." value="{{{searchTerm}}}" class="form-control mb-2 mb-sm-0" id="inlineFormInputName">
+            <input type="text" name="searchTerm" placeholder="Search Cakes..." value="{{{searchTerm}}}" class="form-control mb-2 mb-sm-0"
+                id="inlineFormInputName">
         </div>
         <div class="col-auto">
             <button type="submit" class="btn btn-success">Search</button> |
@@ -13,11 +13,15 @@
         </div>
     </div>
 
-
 </form>
 <br />
 <div style="display: {{{showCart}}}">
-    <a href="/cart" class="btn btn-info">Your Cart</a><span> : <b><i>{{{products}}}</i></b></span>
+    <a href="/cart" class="btn btn-info">Your Cart</a>
+    <span> :
+        <b>
+            <i>{{{products}}}</i>
+        </b>
+    </span>
 </div>
 <br />
 <br />
@@ -29,5 +33,5 @@
     <hr class="my-4">
 
     <h3 class="lead">{{{results}}}</h3>
-    
+
 </div>

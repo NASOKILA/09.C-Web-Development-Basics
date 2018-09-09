@@ -20,9 +20,6 @@
 
         public IHttpResponse Register()
         {
-            //redirektva ni kum /Login
-            //Ako sme registrirani ne trqbva da mojem da re registrirame pak
-
             this.ViewData["showError"] = "none";
             this.ViewData["authDisplay"] = "none";
 
@@ -31,15 +28,12 @@
 
         public IHttpResponse Register(IHttpRequest req)
         {
-            //slagame imenata na inputite ot formata v konstanti zashtoto  po dobre
             const string formNameKey = "name";
             const string formUsernameKey = "username";
             const string formPasswordKey = "password";
             const string formConfirmPasswordKey = "confirmpassword";
 
-
-            //Proverqvame dali FormData sudurja nashite kluchove ot formichkata
-            if (!req.FormData.ContainsKey(formNameKey)
+           if (!req.FormData.ContainsKey(formNameKey)
                 || !req.FormData.ContainsKey(formUsernameKey)
                 || !req.FormData.ContainsKey(formPasswordKey)
                 || !req.FormData.ContainsKey(formConfirmPasswordKey))
@@ -48,21 +42,16 @@
                 return this.FileViewResponse(@"account\register");
             }
 
-            //AKO GI IMA TRQBVA DA SUZDADEM USER V BAZATA DANNI.
-
-            //Vzimame si stoinostite ot formichkata
             var name = req.FormData[formNameKey];
             var username = req.FormData[formUsernameKey];
             var password = req.FormData[formPasswordKey];
             var confirmpassword = req.FormData[formConfirmPasswordKey];
 
-            //Proverqvame dali ne sa null ili ""
             if (string.IsNullOrWhiteSpace(name)
                 || string.IsNullOrWhiteSpace(username)
                 || string.IsNullOrWhiteSpace(password)
                 || string.IsNullOrWhiteSpace(confirmpassword))
             {
-                //Ako e tuka slagame greshkite i se redirektvame kum /register
                 RejectLoginAttempt(EMPTY_FIELDS_ERROR_MESSAGE);
                 return this.FileViewResponse(@"account\register");
             }
@@ -74,34 +63,26 @@
             }
 
 
-            //Proverqvame dali parolite suvpadat
             if (password != confirmpassword)
             {
                 RejectLoginAttempt(PASSWORD_MATCH_ERROR_MESSAGE);
                 return this.FileViewResponse(@"account\register");
             }
 
-
-            //Trqbva da keshirame parolata predi da registrirame daden user
-
             User user = new User()
             {
                 Name = name,
                 Username = username,
-                PasswordHash = PasswordUtilities.GenerateHash256(password), //keshirame parolata kato polzvame PaswordUtilities klasa
+                PasswordHash = PasswordUtilities.GenerateHash256(password),
                 DateOfRegistration = DateTime.UtcNow
             };
 
-
-            //TRQBVA DA SLOJIM  USERA V BAZATA, POLZVAME KONTEXTA:
             using (var context = new ByTheCakeContext())
             {
                 context.Users.Add(user);
                 context.SaveChanges();
             }
 
-
-            //Ako vsichko mine dobre, avtomatichno se logvame s imeto si kato suzdavame sesiq
             return LoginUser(req, user);
         }
         
@@ -136,9 +117,6 @@
 
                 return this.FileViewResponse(@"account\login");
             }
-
-
-            //Za da se lognem ni trqbva usera ot bazata s tova ime i parola
 
             using (var context = new ByTheCakeContext())
             {

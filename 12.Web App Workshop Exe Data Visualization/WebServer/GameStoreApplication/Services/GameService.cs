@@ -8,14 +8,12 @@
     
     public class GameService : IGameService
     {
-
         private readonly GameStoreContext context;
 
         public GameService()
         {
             this.context = new GameStoreContext();
         }
-
 
         public Game FindGameById(int id)
         {
@@ -52,19 +50,16 @@
             this.context.SaveChanges();
         }
 
-
         public void RemoveGameFromDb(Game game)
         { 
             this.context.Games.Remove(game);
             this.context.SaveChanges();
         }
         
-
         public void UpdateGame(Game game)
         {
             this.context.Update(game);
             this.context.SaveChanges();
         }
-        
     }
 }

@@ -1,14 +1,9 @@
-﻿
-
-
-
-<header>
+﻿<header>
     <nav class="navbar navbar-expand-md navbar-light bg-warning">
         <div class="container">
             <a class="navbar-brand" href="/">SoftUni Store</a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -38,32 +33,35 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="text-center"><h1 class="display-3">Register</h1></div>
+                <div class="text-center">
+                    <h1 class="display-3">Register</h1>
+                </div>
                 <br/>
                 <form method="post">
 
                     <div class="form-group row">
                         <label class="sr-only">Email</label>
-                        <input class="form-control" name="email" placeholder="somebody@example.com"/>
+                        <input class="form-control" name="email" placeholder="somebody@example.com" />
                     </div>
 
                     <div class="form-group row">
                         <label class="sr-only">Full Name</label>
-                        <input pattern="^[a-zA-Z -.]+$"  name="fullname" class="form-control" placeholder="Full Name"/>
+                        <input pattern="^[a-zA-Z -.]+$" name="fullname" class="form-control" placeholder="Full Name" />
                     </div>
 
                     <div class="form-group row">
                         <label class="sr-only">Password</label>
-                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="password" class="form-control" placeholder="Password"/>
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="password" class="form-control" placeholder="Password"
+                        />
                     </div>
 
                     <div class="form-group row">
                         <label class="sr-only">Confirm Password</label>
-                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password"/>
+                        <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" type="password" name="confirmpassword" class="form-control" placeholder="Confirm Password"
+                        />
                     </div>
 
-                    <input type="submit" class="btn btn-outline-warning btn-lg btn-block"
-                           value="Register"/>
+                    <input type="submit" class="btn btn-outline-warning btn-lg btn-block" value="Register" />
                 </form>
                 <br/>
             </div>

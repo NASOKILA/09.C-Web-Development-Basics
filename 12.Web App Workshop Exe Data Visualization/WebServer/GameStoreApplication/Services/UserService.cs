@@ -12,7 +12,6 @@
 
     public class UserService : IUserService
     {
-
         private GameStoreContext context { get; set; }
 
         public UserService()
@@ -57,8 +56,6 @@
             return this.context.Users.Find(id);
         }
 
-
-
         public User GetCurrentUser(IHttpRequest req)
         {
             int currentUserId = req.Session.Get<int>(SessionStore.CurrentUserKey);
@@ -66,13 +63,10 @@
             return currentUser;
         }
 
-
         public bool UserGameNotAvaliable(int creatorId, int gameId)
         {
             return this.context.UsersGames.Any(ug => ug.CreatorId == creatorId && ug.GameId == gameId);
         }
-
-        
 
         public bool CheckIfLogedIn(IHttpRequest req)
         {

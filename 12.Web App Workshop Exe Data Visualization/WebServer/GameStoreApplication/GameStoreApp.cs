@@ -63,10 +63,6 @@
                     "/logout",
                     req => new AccountController(this.userService, this.cart).Logout(req));
             
-
-
-
-
             appRouteConfig
                 .Get(
                     "/",
@@ -92,10 +88,6 @@
                 .Get(
                     "/removeFromCart/{(?<id>[0-9]+)}",
                     req => new CartController(this.userService, this.gameService, this.cart).RemoveFromCart(req));
-
-            
-
-
 
             appRouteConfig
                 .Get(
@@ -141,8 +133,6 @@
                 .Get(
                     "/details/{(?<id>[0-9]+)}",
                     req => new GamesController().GameDetails(req));
-
-            
 
         }
     }

@@ -16,7 +16,7 @@
         [Required, MinLength(3)]
         public string Name { get; set; }
 
-        [DataType(DataType.Currency)] // taka mu kazvame che tova e pari
+        [DataType(DataType.Currency)] 
         public decimal Price { get; set; }
 
         [StringLength(2048, MinimumLength = 0)]
