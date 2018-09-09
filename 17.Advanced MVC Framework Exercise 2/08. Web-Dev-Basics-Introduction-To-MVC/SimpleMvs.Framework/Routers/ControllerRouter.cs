@@ -12,7 +12,6 @@
     using WebServer.Enums;
     using Interfaces;
 
-    //The main purpose of this class would be to transform the incoming request to a response
     public class ControllerRouter : IHandleable
     {
         private Controller GetController(string controllerName, IHttpRequest request)
@@ -99,7 +98,6 @@
                 throw new InvalidOperationException("Invalid URL");
             }
 
-            //try uppercase to the first letter
             string controllerName = invocationParameters[0] + 
                 MvcContext.Get.ControllersSuffix;
             controllerName = Char.ToUpper(controllerName.First()) + controllerName.Substring(1);

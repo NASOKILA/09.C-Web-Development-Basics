@@ -5,7 +5,6 @@ namespace SimpleMvc.Domain
 
     public class User
     {
-
         public User()
         {
             this.Notes = new List<Note>();

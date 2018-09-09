@@ -1,5 +1,4 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using SimpleMvc.Domain;
 
 namespace SimpleMvc.Data
@@ -9,11 +8,9 @@ namespace SimpleMvc.Data
         public NotesDbContext()
         {}
 
-
         public DbSet<User> Users { get; set; }
 
         public DbSet<Note> Notes { get; set; }
-
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -23,7 +20,5 @@ namespace SimpleMvc.Data
 
             base.OnConfiguring(optionsBuilder);
         }
-
-
     }
 }

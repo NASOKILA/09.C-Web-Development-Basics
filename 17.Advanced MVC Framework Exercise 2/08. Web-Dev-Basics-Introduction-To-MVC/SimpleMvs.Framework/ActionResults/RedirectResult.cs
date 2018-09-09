@@ -16,6 +16,5 @@ namespace SimpleMvs.Framework.ActionResults
 
             return this.RedirectUrl;
         }
-
     }
 }

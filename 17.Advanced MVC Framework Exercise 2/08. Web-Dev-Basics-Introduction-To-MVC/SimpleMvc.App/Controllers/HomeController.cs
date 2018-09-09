@@ -19,7 +19,6 @@
             {
                 this.Model["displayType"] = "none";
                 this.Model["loginRegisterDisplayType"] = "block";
-
             }
 
             return this.View();
@@ -29,8 +28,7 @@
         public IActionResult About()
         {
             return this.View();
-        }
-        
+        }  
     }
 }
 

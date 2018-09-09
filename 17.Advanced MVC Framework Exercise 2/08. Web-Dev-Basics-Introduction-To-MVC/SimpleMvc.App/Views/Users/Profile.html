@@ -1,14 +1,18 @@
-﻿
-<h1>User: {{{username}}}</h1>
+﻿<h1>User: {{{username}}}</h1>
 
 <br />
 
 <h3>Add Note:</h3>
 <form action="/users/profile" method="post">
-    Title: <input type="text" name="Title" /><br />
-    Content: <input type="text" name="Content" /><br />
-    <input type="hidden" name="UserId" value="{{{userId}}}" /><br />
-    <input type="submit" value="Add Note"/><br />
+    Title:
+    <input type="text" name="Title" />
+    <br /> Content:
+    <input type="text" name="Content" />
+    <br />
+    <input type="hidden" name="UserId" value="{{{userId}}}" />
+    <br />
+    <input type="submit" value="Add Note" />
+    <br />
 </form>
 
 {{{message}}}
@@ -17,4 +21,4 @@
 <h5>List of notes</h5>
 <ul>
     {{{notes}}}
-</ul>   
+</ul>

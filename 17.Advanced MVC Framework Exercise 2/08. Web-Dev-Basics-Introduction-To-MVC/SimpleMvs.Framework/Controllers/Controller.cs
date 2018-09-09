@@ -21,10 +21,8 @@
         {
             this.Model = new ViewModel();
 
-            //if we dont have a user we create it
             this.User = new Authentication();
         }
-
 
         protected ViewModel Model { get; }
 
@@ -43,7 +41,7 @@
             string fullQualifiedName = string.Format(
                 "{0}\\{1}\\{2}",
                 MvcContext.Get.ViewsFolder,
-                controllerName, //.Remove(controllerName.Length - 10),
+                controllerName, 
                 caller);
 
             IRenderable view = new View(fullQualifiedName, this.Model.Data);
@@ -58,16 +56,12 @@
 
         protected bool IsValidModel(object bindingModel)
         {
-            //we foreach its properties
             foreach (var property in bindingModel.GetType().GetProperties())
             {
-
-                //we take only the attributes for each property
                 IEnumerable<Attribute> attributes =
                     property.GetCustomAttributes()
                         .Where(a => a is PropertyAttribute);
 
-                //if there arent any we ontinue to the next property
                 if (!attributes.Any())
                 {
                     continue;
@@ -87,8 +81,6 @@
 
         }
 
-        //initialize the Session in the controller, each time the Controller is initialized.
-        //its internal so we can use it only in this assembly
         protected internal void InitializeController()
         {
             var user = this.Request
@@ -102,7 +94,6 @@
 
         }
         
-        //methods to work with the session, login and logout user
         protected void SignIn(string name)
         {
             this.Request.Session.Add(SessionStore.CurrentUserKey, name);
@@ -117,7 +108,6 @@
         {
             this.Model["displayType"] = this.User.IsAuthenticated ? "block" : "none";
         }
-
     }
 }
 
