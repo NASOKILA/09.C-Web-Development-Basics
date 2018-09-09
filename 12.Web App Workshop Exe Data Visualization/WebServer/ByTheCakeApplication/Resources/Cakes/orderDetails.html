@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            padding: 1px;
+        }
+
+        th {
+            background-color: #EFEFEF;
+        }
+    </style>
+</head>
+<body>
+
+
+    <br />
+    <br />
+    <p class="display-3">Order {{{id}}}</p>
+    <br />
+    <table class="table">
+        <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+            {{{result}}}
+        </tbody>
+</table>
+    <br />
+    <i class="display-4">Order Sum: ${{{orderSum}}}</i>
+    <br />
+    <br />
+    <i class="display-4">Created on: {{{creationDate}}}</i>
+    <br />
+    <br />
+    <br />
+    <a href="/" class="btn btn-lg btn-dark">Back to home</a> | 
+    <a href="/orders" class="btn btn-lg btn-secondary">Back to my orders</a>
+
+    <br />
+    <br />
+
+</body>
+</html>

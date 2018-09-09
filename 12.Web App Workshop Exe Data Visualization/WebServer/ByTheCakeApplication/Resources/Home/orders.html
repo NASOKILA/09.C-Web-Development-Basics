@@ -1,0 +1,41 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            padding: 1px;
+        }
+
+        th {
+            background-color: #EFEFEF;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <br />
+    <br />
+    <p class="display-3">My Orders</p>
+    <br />
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Order Id</th>
+                <th scope="col">Created On</th>
+                <th scope="col">Sum</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{{result}}}
+        </tbody>
+    </table>
+    <br />
+    <a href="/" class="btn btn-lg btn-dark">Back to home</a>
+    <br />
+    <br />
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿
+<br />
+<br />
+<form method="get">
+
+    <div class="form-row align-items-center">
+        <div class="col-sm-3">
+            <input type="text" name="searchTerm" placeholder="Search Cakes..." value="{{{searchTerm}}}" class="form-control mb-2 mb-sm-0" id="inlineFormInputName">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">Search</button> |
+            <a href="/" class="btn btn-primary">Back to home</a>
+        </div>
+    </div>
+
+
+</form>
+<br />
+<div style="display: {{{showCart}}}">
+    <a href="/cart" class="btn btn-info">Your Cart</a><span> : <b><i>{{{products}}}</i></b></span>
+</div>
+<br />
+<br />
+
+
+<div class="jumbotron">
+    <p class="display-4">Results</p>
+    <br />
+    <hr class="my-4">
+
+    <h3 class="lead">{{{results}}}</h3>
+    
+</div>
