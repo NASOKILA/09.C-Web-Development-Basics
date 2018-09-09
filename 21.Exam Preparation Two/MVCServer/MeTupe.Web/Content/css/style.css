@@ -1,0 +1,52 @@
+.bg-color-dark {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.footer {
+	background-color: #483D8B;
+	color: #A9A9A9;
+}
+
+.nav-item>a:hover, .navbar-brand:hover {
+	color: #FFFFFF;
+}
+
+iframe {
+    overflow: hidden;
+}
+
+.details-iframe {
+    float: left;
+    padding: 10px;
+}
+
+.error {
+    text-align:center;
+    color:red;
+    font-family:sans-serif
+}
+
+
+.profile-data {
+    color:aqua;
+    text-align:center;
+    padding: 20px;
+}
+
+.tube-detail {
+    color: cornflowerblue;
+    text-align: center;
+    
+}
+
+
+.card-title {
+    text-align:center;
+}
+
+.card-text {
+    text-align: center;
+    font-style:italic;
+    font-size:larger;
+}
