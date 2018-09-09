@@ -1,0 +1,24 @@
+
+
+div {
+    padding: 25px;
+}
+
+p {
+    text-align: center
+}
+
+#outer {
+    border: 5px dotted blue;
+    border-radius: 25px;
+}
+
+#middle {
+    border: 3px dashed red;
+    border-radius: 15px;
+}
+
+#inner {
+    border: 2px solid green;
+    border-radius: 5px;
+}

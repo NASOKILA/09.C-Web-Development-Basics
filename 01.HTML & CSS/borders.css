@@ -1,0 +1,32 @@
+
+
+p {
+    text-align: center;
+    border-radius: 50px;
+    background-color: #D3D3D3;
+}
+
+p:first-of-type {
+    border:2px solid red;
+}
+
+p:first-of-type > span {
+    color:red;
+}
+
+p:nth-child(2) {
+    border:2px solid green;
+}
+
+p:nth-child(2) > span {
+    color:green;
+}
+
+p:nth-child(3) {
+    border:2px solid blue;
+}
+
+p:nth-child(3) > span {
+    color:blue;
+}
+
