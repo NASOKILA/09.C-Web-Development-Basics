@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <meta charset="utf-8" />
+    <title>Search</title>
+</head>
+
+<body>
+
+    
+
+    <a href="/">Back to Home</a><br />
+    <a href="/logout">Logout</a>
+
+    <form method="post" action="/search">
+        <input type="text" name="cake" value="Cake"/>
+        <input type="submit" name="submitBtn" value="Search"/>
+    </form>
+
+    <br />
+    <a href="/cart">Your Cart</a>
+    <div id="products"></div>
+    <br />
+
+    <div id="replace"></div>
+    <br />
+    <hr />
+    <footer>&copy;All Rights Reserved</footer>
+</body>
+</html>
