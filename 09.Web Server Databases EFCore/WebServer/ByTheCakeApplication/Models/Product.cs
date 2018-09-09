@@ -5,7 +5,6 @@
 
     public class Product
     {
-
         public Product()
         {
             this.Orders = new List<ProductOrder>();
@@ -16,13 +15,12 @@
         [Required, MinLength(3)]
         public string Name { get; set; }
 
-        [DataType(DataType.Currency)] // taka mu kazvame che tova e pari
+        [DataType(DataType.Currency)] 
         public decimal Price { get; set; }
 
         [StringLength(2048, MinimumLength = 0)]
         public string ImageUrl { get; set; }
 
-        public ICollection<ProductOrder> Orders { get; set; }
-        
+        public ICollection<ProductOrder> Orders { get; set; }   
     }
 }

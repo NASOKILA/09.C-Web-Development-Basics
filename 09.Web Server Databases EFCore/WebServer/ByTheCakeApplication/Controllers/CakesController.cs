@@ -39,7 +39,6 @@
                 ImageUrl = imageUrl
             };
 
-            //Dobvqme produkta v bazata
             using (var context = new ByTheCakeContext())
             {
                 context.Products.Add(product);
@@ -89,7 +88,6 @@
                 
                 var results = "No cakes found";
 
-                //Ako imame namereni torti gi subirame s nov red
                 if (cakeResults.Any())
                 {
                     results = string.Join(Environment.NewLine, cakeResults);
@@ -163,12 +161,10 @@
                     return new BadRequestResponse();
                 }
 
-                //Selektirame idtata na productite ot tozi order
                 List<int> productIds = context.ProductOrders
                     .Where(p => p.ProductId == orderId)
                     .Select(p => p.OrderId).ToList();
 
-                //vzimame vsichki produkti
                 List<Product> products = context.Products
                     .Where(p => productIds.Contains(p.Id))
                     .ToList();
@@ -180,7 +176,6 @@
                 }
             }
 
-            
             this.ViewData["id"] = order.Id.ToString();
             this.ViewData["result"] = result;
             this.ViewData["orderSum"] = orderSum.ToString("F2");
@@ -188,6 +183,5 @@
 
             return this.FileViewResponse(@"cakes\orderDetails");
         }
-
     }
 }

@@ -13,18 +13,14 @@
     {
         public IHttpResponse Index(IHttpRequest req) {
 
-            //VZIMAME SI Id-to na usera ot sesiqta
             var currentUserId = req.Session.Get<int>(SessionStore.CurrentUserKey);
 
-            //Vzimame si uzera ot bazata kato polzvame idtp
             using (var context = new ByTheCakeContext())
             {
-                //Sus .Find() neshtata stawat po burzo
                 User currentUser = context.Users.Find(currentUserId);
 
                 if (currentUser != null)
                 {
-                    //SEGA TRQBVA DA PODADEM DANNITE KUM VIEW-to
                     this.ViewData["username"] = currentUser.Username;
                 }
             }
@@ -86,8 +82,7 @@
                     .Orders.Where(o => o.UserId == currentUserId)
                     .OrderByDescending(o => o.DateOfCreation)
                     .ToList();
-                //.Select(o => $@"<tr><td><a href=""/orderDetails/{o.Id}"">{o.Id}</a></td><td>${o.DateOfCreation.ToString("dd-MM-yyyy")}</td><td>{o.Products.Sum(p => p.Price)}</td></tr>")
-
+               
                 if (orders.Any()){
                    result = "";
                 }
@@ -101,8 +96,7 @@
 
                     decimal sum = orderProducts.Sum(op => op.Price);
                     result += $@"<tr><td><a href=""/orderDetails/{order.Id}"">{order.Id}</a></td><td>{order.DateOfCreation.ToString("dd-MM-yyyy")}</td><td>${sum}</td></tr>";
-                }
-                
+                }   
             }
             
             this.ViewData["result"] = result;

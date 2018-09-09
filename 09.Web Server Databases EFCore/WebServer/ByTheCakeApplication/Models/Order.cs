@@ -7,7 +7,6 @@
     {
         public Order()
         {
-            //HashSet<> e po burzo ot List<>
             this.Products = new HashSet<ProductOrder>();
         }
 

@@ -18,11 +18,8 @@
 
         private static void ConfigureDatabase()
         {
-
-            //INICIALIZIRAME SI BAZATA TUK ZA DA Q POLZVAME 
             var context = new ByTheCakeContext();
 
-            //Taka Pravim migraciqta Obache trqbva da q napravim smo vednuj a ne vseki put
             context.Database.Migrate();
         }
 
