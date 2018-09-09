@@ -1,0 +1,44 @@
+﻿<br />
+<br />
+<form method="post">
+    
+    <div class="form-row align-items-center">
+        <div class="col-sm-3">
+            <label class="sr-only" for="inlineFormInputName">Name</label>
+            <input type="text" name="name" class="form-control mb-2 mb-sm-0" id="inlineFormInputName" placeholder="Name">
+        </div>
+        <div class="col-sm-3">
+            <label class="sr-only" for="inlineFormInputGroupUsername">Price</label>
+            <div class="input-group mb-2 mb-sm-0">
+                <div class="input-group-addon">$</div>
+                <input type="number" min="0" name="price" class="form-control" id="inlineFormInputGroupUsername" placeholder="Price">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <label class="sr-only" for="inlineFormInputGroupUsername">Price</label>
+            <input type="text" name="imageUrl" placeholder="Picture URL" class="form-control" id="inlineFormInputGroupUsername">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-success">Add Cake</button> |
+            <a href="/" class="btn btn-primary">Back to home</a>
+
+        </div>
+    </div>
+
+</form>
+<br />
+<br />
+<div style="display: {{{showResult}}}">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-3">Cake Details</h1>
+            <br />
+            <p class="lead">Name: {{{name}}}</p>
+            
+            <p class="lead">Price: {{{price}}}</p>
+            <img src="{{{imageUrl}}}" class="img-thumbnail" width="500" alt="Image not found" />
+            <br />
+        </div>
+    </div>  
+</div>
+

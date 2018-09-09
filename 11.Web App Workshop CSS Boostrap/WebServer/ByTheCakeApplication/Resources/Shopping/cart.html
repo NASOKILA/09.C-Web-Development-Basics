@@ -1,0 +1,23 @@
+﻿
+
+<div class="jumbotron">
+    <h1 class="display-1">Your Cart</h1>
+    <br />
+    <br />
+
+    <p class="lead display-4">{{{cartItems}}}</p>
+    <hr class="my-4">
+    <p class="lead display-3">Total Cost: ${{{totalCost}}}</p>
+
+    <br />
+    <br />
+
+    <form method="post" action="/shopping/finish-order">
+        <p class="lead btn-broup">
+            <input class="btn btn-success btn-lg" type="submit" value="Finish Order" /> |
+            <a class="btn btn-primary btn-lg" href="/" role="button">Back to home</a> |
+            <a href="/search" class="btn btn-secondary btn-lg" role="button">Search more cakes</a>
+        </p>
+    </form>
+
+</div>
