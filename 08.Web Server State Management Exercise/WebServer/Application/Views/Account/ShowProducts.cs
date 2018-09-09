@@ -8,7 +8,6 @@
 
     public class ShowProducts : IView
     {
-     
         public string View()
         {
             string[] products = System.IO.File.ReadAllText("./Application/Resourses/products.csv")

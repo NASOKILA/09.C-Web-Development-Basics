@@ -7,7 +7,6 @@
 
     public class AccountController
     {
-
         private const string UserLoginToken = "{0}_UserLoggedinToken_$";
 
         public IHttpResponse Login()
@@ -18,10 +17,8 @@
         
         public IHttpResponse LoginPost(IHttpRequest request, string username, string password)
         {
-            //zapisvame usera v lokalnata sesiq
             SaveUserInSession(request, username);
 
-            //vadim kookito
             var sessionCookie = request.Session.Get("UserLoginToken");
             
             return new RedirectResponse("/");
@@ -36,7 +33,6 @@
 
         public IHttpResponse Success(IHttpRequest request)
         {
-
             if (!CheckIfLoggedIn(request))
                 return new RedirectResponse("/login");
 
@@ -49,7 +45,6 @@
 
         public IHttpResponse OrderPost(IHttpRequest request, string orderedCake)
         {
-
             if (!CheckIfLoggedIn(request))
                 return new RedirectResponse("/login");
 
@@ -66,7 +61,6 @@
 
         public IHttpResponse Cart(IHttpRequest request)
         {
-
             if (!CheckIfLoggedIn(request))
                 return new RedirectResponse("/login");
             

@@ -35,11 +35,6 @@
 
             Console.WriteLine($"Server running on {localHostIpAddress}:{this.port}");
 
-
-
-
-            //TUK HVURLQ GRESHKA PRI POST ZAQVKA AKO POLZVAME GOOGLE CHROME, NE ZNAM ZASHTO.
-            //MINI NA FIREFOX I NQMA DA GURMI.
             Task.Run(this.ListenLoop).Wait();
         }
 

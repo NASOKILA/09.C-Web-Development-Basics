@@ -21,7 +21,6 @@
         public IHttpResponse RegisterPost(string name)
         {
             return new RedirectResponse($"/user/{name}");
-        }
-        
+        }     
     }
 }
