@@ -8,19 +8,14 @@
     {
         [HttpGet]
         public IActionResult Index() {
-
             return this.RedirectToAction("/home/about");
         }
 
         [HttpGet]
         public IActionResult About()
         {
-
             return this.View();
         }
-
-
     }
-
 }
 

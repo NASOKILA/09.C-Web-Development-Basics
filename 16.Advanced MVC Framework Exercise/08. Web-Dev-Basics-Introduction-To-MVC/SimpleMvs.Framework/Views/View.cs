@@ -5,7 +5,6 @@
     using System.IO;
     using System.Linq;
 
-    //Loads layout.html and renders other html views in it.
     public class View : IRenderable
     {
         public string BaseLayoutFileName = "Layout";
@@ -23,7 +22,6 @@
             this.viewData = viewData;
         }
 
-        //returns the full html
         public string Render()
         {
             string fullHtml = this.ReadFile();
@@ -32,7 +30,6 @@
 
                 foreach (var parameter in this.viewData)
                 {
-                    //we replace the key eith the value
                     fullHtml = fullHtml.Replace($"{{{{{{{parameter.Key}}}}}}}", parameter.Value);
                 }
             }
@@ -54,7 +51,6 @@
                 return errorHtml;
             }
 
-            //to do
             string fileRead = File.ReadAllText(templateFullQualifiedNameWithExtenion);
             string fullHtml = layoutHtml.Replace(this.ContentPlaceHolder, fileRead);
             return fullHtml;

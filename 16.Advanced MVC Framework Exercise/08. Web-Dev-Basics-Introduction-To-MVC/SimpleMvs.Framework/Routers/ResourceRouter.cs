@@ -4,7 +4,6 @@
     using System.IO;
     using System.Linq;
     using WebServer.Contracts;
-    //using System.Net;
     using WebServer.Enums;
     using WebServer.Http.Contracts;
     using WebServer.Http.Response;
@@ -24,7 +23,6 @@
                 .Last();
 
             IHttpResponse fileResponse = null;
-
 
             try
             {

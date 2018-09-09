@@ -1,5 +1,4 @@
-﻿
-namespace SimpleMvc.App.Views.Users
+﻿namespace SimpleMvc.App.Views.Users
 {
     using SimpleMvs.Framework.Interfaces;
     using System.Text;

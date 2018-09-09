@@ -1,6 +1,5 @@
 ﻿namespace SimpleMvs.Framework.Security
 {
-    //Stores the user session
     public class Authentication
     {
         public bool IsAuthenticated { get; private set; }

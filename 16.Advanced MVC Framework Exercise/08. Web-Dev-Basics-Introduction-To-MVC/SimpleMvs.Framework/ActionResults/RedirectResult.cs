@@ -1,5 +1,4 @@
-﻿
-namespace SimpleMvs.Framework.ActionResults
+﻿namespace SimpleMvs.Framework.ActionResults
 {
     using Interfaces;
 
@@ -16,6 +15,5 @@ namespace SimpleMvs.Framework.ActionResults
 
             return this.RedirectUrl;
         }
-
     }
 }

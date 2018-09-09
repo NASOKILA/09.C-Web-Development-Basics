@@ -89,17 +89,14 @@
             string sessionId = null;
             if (httpRequest.Cookies.ContainsKey(SessionStore.SessionCookieKey))
             {
-                //get the cookie and the sessionId
                 var cookie = httpRequest.Cookies.Get(SessionStore.SessionCookieKey);
                 sessionId = cookie.Value;
 
-                //save the value of that id in the httpRequest Session
                 httpRequest.Session = SessionStore.Get(sessionId);
 
             }
             else
             {
-                //if we dont have that cookie
                 sessionId = Guid.NewGuid().ToString();
                 httpRequest.Session = new HttpSession(sessionId);   
             }
@@ -110,13 +107,9 @@
 
         private void SetResponseSession(IHttpResponse httpResponse, string sessionId)
         {
-            //httpResponse.Cookies.Add(new HttpCookie(SessionStore.CurrentUserKey, sessionData));
             var session = SessionStore.Get(sessionId);
 
-            //We set the session in the response header
             httpResponse.Headers.Add(HttpHeader.SetCookie, sessionId);
-
-
         }
 
         private async Task<IHttpRequest> ReadRequest()

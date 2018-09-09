@@ -1,5 +1,4 @@
-﻿
-namespace SimpleMvc.Domain
+﻿namespace SimpleMvc.Domain
 {
     using System.Collections.Generic;
 

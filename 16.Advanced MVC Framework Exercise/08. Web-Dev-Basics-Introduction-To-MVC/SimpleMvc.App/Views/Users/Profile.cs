@@ -15,7 +15,6 @@
             sb.AppendLine("<a href=\"/home/index\">Back Home</a>");
             sb.AppendLine("<a href=\"/users/all\">All Users</a>");
 
-
             sb.AppendLine($"<h2>User : {Model.Username}</h2>");
             
             sb.AppendLine("<form action=\"profile\" method=\"POST\">");

@@ -4,7 +4,6 @@
 
     public class ViewResult : IViewable
     {
-
         public ViewResult(IRenderable view)
         {
             this.View = view;

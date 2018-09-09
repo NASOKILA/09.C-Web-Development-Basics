@@ -1,5 +1,4 @@
-﻿
-namespace SimpleMvs.Framework.Attributes.Property
+﻿namespace SimpleMvs.Framework.Attributes.Property
 {
     using System.Text.RegularExpressions;
 
