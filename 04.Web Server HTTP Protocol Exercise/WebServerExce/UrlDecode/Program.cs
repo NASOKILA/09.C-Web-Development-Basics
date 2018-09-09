@@ -9,8 +9,6 @@
         {
             string input = Console.ReadLine();
 
-            //WebUtility avtomatichno ni decodira i enkodira URL-i i HTML-i, 
-            //moje da pravi i drugi neshta.
             string decodedUrl = WebUtility.UrlDecode(input);
 
             Console.WriteLine(decodedUrl);
