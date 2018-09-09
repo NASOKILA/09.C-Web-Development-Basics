@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/style/style.css" />
+    <link rel="stylesheet" type="text/css" href="/style/form.css" />
+    <title>SoftUni Beers</title>
+</head>
+
+<body>
+    <nav>
+        <div class="topnav">
+            <a .class="logo" href="index.html">
+                <img src="/images/logo.png" alt="No logo avaliable" />
+            </a>
+            <a href="index.html">Home</a>
+            <a href="all-beers.html">See All Beers</a>
+            <a class="active" href="order.html">Order a Beer</a>
+            <a class="right" href="register.html">Register</a>
+            <a class="right" href="login.html">Log in</a>
+        </div>
+    </nav>
+
+    <main>
+        
+        <center>
+                <h1>Order a Beer</h1>
+            <form method="POST" action="order.html">
+                <label for="brand">Brand</label>
+                <select name="brand">
+                    <option selected disabled>Select a brand</option>
+                    <option value="corona">Corona Extra 330ml</option>
+                    <option value="stella-artois">Stella Artois 500ml</option>
+                    <option value="carlsberg">Carlsberg 330ml</option>
+                    <option value="heineken">Heineken 330ml</option>
+                </select>
+                
+                <label for="quantity">Quantity</label>
+                <input name="quantity" type="number" min="1" max="15" placeholder="Enter amount of beers (1-15)"/> 
+                
+                <label for="destination">Destination</label>
+                <select name="destination">
+                    <option selected disabled>Select a destination</option>
+                    <option value="vegas">Vegas</option>
+                    <option value="munich">Munich</option>
+                    <option value="paris">Paris</option>
+                    <option value="london">London</option>
+                </select>
+                
+                <label for="birthDate">Enter your birthdate</label>
+                <input name="birthDate" type="date"/> 
+
+                <label for="comments">Get an option, comment, recommendation? Share it with us!</label>
+                <input type="text" name="comments" placeholder="Share your opinion with us!"/>  
+            
+                <input name="submitBtn" type="submit" value="Submit"/>
+            </form>
+        </center>
+    </main>
+
+    <footer>
+        <hr/>
+        <p>
+            <em>&copy; 2017 &ndash; SoftUni Beers</em>
+        </p>
+    </footer>
+</body>
+
+</html>
