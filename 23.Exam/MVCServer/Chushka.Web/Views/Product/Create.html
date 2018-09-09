@@ -1,0 +1,42 @@
+﻿
+<main class="mt-3">
+    <h1 class="text-center">Create Product</h1>
+    <hr class="bg-secondary half-width" />
+    <form class="mx-auto half-width" method="post">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name..." name="Name">
+        </div>
+        <div class="form-group">
+            <label for="price">Price</label>
+            <input type="number" class="form-control" id="price" placeholder="Price..." name="Price">
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea type="text" class="form-control" id="description" placeholder="Description..." name="Description"></textarea>
+        </div>
+
+        <h2 class="text-center">Product Type</h2>
+        <hr class="bg-secondary half-width" />
+
+        <div class="form-group">
+
+        <input type="radio" name="Type"  checked value="Health"> Food
+        <input type="radio" name="Type" value="Domestic"> Domestic
+        <input type="radio" name="Type" value="Health"> Health
+        <input type="radio" name="Type" value="Cosmetic"> Cosmetic
+        <input type="radio" name="Type" value="Other"> Other
+        </div>
+
+        <hr class="bg-secondary half-width" />
+
+
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="btn chushka-bg-color">Create</button>
+        </div>
+    </form>
+</main>
+
+<h1 class="text-center danger" style="color:red">{{{error}}}</h1>
+
