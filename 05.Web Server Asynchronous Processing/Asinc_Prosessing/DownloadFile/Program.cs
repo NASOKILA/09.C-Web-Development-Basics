@@ -18,15 +18,11 @@
 
             Console.WriteLine("Downloading...");
 
-            //vzimame si klient
             using (var client = new WebClient())
             {
-                //svalqme faila kato izprashtame asinhromna get zaqvka i go zapazvame
                 client.DownloadFile(url, filename + format);    
 
-                Console.WriteLine("File downloaded !!!");
-                
-                //Sus Process.Start() puskame faila ot sistemata
+                Console.WriteLine("File downloaded !!!");                
             }
         }
     }

@@ -7,7 +7,6 @@
     {
         static void Main(string[] args)
         {
-
             string[] nums = Console.ReadLine()
                     .Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
@@ -19,8 +18,8 @@
                 PrintEvenNumbers(start, end);
             });
 
-            evens.Start(); //puskame threada
-            evens.Join(); //izchakvame dokato svurshi i posle produljava koda na dolo
+            evens.Start(); 
+            evens.Join(); 
 
             Console.WriteLine("Thread finished work");
         }
@@ -32,6 +31,5 @@
                 Console.WriteLine(i);
             }
         }
-
     }
 }

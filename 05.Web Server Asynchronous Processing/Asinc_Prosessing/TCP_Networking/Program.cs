@@ -6,10 +6,6 @@ namespace TCP_Networking
     {
         static void Main(string[] args)
         {
-            /*
-             TCP - Tova e za slushane i kak raboti samata mreja, socketi i drugo.
-             */
-
             Console.WriteLine("Hello World!");
         }
     }
