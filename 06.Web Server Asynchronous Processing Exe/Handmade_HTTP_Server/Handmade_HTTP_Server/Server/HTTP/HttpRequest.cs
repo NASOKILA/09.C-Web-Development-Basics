@@ -10,10 +10,8 @@
 
     public class HttpRequest : IHttpRequest
     {
-
         public HttpRequest(string requestText)
-        {
-            
+        {  
             this.FormData = new Dictionary<string, string>();
             this.QueryParamerers = new Dictionary<string, string>();
             this.UrlParameters = new Dictionary<string, string>();
@@ -41,7 +39,6 @@
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
             CoreValidator.ThrowIfNullOrEmpty(value, nameof(value));
 
-            //ako poluchim 2 parametura edni i sushti gi prezapisvame
             this.UrlParameters[key] = value;
         }
 
@@ -58,8 +55,6 @@
 
         private void ParseRequest(string requestString)
         {
-            //Split the string
-
             string[] requestLines = requestString.Split(Environment.NewLine);
             
             if (!requestLines.Any())
@@ -85,16 +80,11 @@
             this.ParseParameters();
 
             this.ParseFormData(requestLines.Last());
-
-
-
         }
 
         
         private HttpRequestMethod ParseRequestMethod(string method)
         {
-            //parsvame enum
-
             try
             {
                 HttpRequestMethod parseMethod;
@@ -177,7 +167,5 @@
                 dict.Add(queryKey, queryValue);
             }
         }
-        
-
     }
 }

@@ -10,7 +10,6 @@
 
     public class ServerRouteConfig : IServerRouteConfig
     {
-
         public ServerRouteConfig(IAppRouteConfig appRouteConfig)
         {
             this.routes = new Dictionary<HttpRequestMethod, IDictionary<string, IRoutingContext>>();

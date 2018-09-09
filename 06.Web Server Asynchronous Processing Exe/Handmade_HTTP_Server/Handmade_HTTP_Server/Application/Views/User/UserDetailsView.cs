@@ -16,6 +16,5 @@
         {
             return $"<body>Hello, {model["name"]}!</body>";
         }
-
     }
 }

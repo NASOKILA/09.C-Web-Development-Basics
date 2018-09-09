@@ -11,7 +11,6 @@
 
     public class ConnectionHandler
     {
-        //mojem da chetem i izprashtame baitove su Socket klasa
         private readonly Socket client;
         private readonly IServerRouteConfig serverRouteConfig;
 
@@ -44,8 +43,6 @@
                 Console.WriteLine();
             }
 
-            
-
             this.client.Shutdown(SocketShutdown.Both);
         }
 
@@ -54,9 +51,7 @@
             var result = new StringBuilder();
 
             var data = new ArraySegment<byte>(new byte[1024]);
-
-
-            
+ 
             while (true)
             {
                 int numberOfButesRead =
@@ -75,7 +70,6 @@
                 {
                     break;
                 }
-
             }
 
             if (result.Length == 0) {
@@ -85,5 +79,4 @@
             return new HttpRequest(result.ToString());
         }
     }
-
 }

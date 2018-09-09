@@ -7,7 +7,6 @@
 
     public class HttpHeaderCollection : IHttpHeaderCollector
     {
-
         private readonly Dictionary<string, HttpHeader> headers;
 
         public HttpHeaderCollection()
@@ -41,7 +40,6 @@
         {
             return string.Join(Environment.NewLine, this.headers);
         }
-
     }
 }
 

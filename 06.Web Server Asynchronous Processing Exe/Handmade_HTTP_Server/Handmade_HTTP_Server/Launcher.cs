@@ -7,8 +7,6 @@
 
     public class Launcher : IRunnable
     {
-        
-
         static void Main(string[] args)
         {
             new Launcher().Run();

@@ -10,7 +10,6 @@
     {
         public void Configure(IAppRouteConfig appRouteConfig)
         {
-
             appRouteConfig
                 .AddRoute("/", new GetHandler(request => new HomeController().Index()));
 
@@ -28,7 +27,6 @@
                 .AddRoute("/user/{(?<name>[a-z]+)}", 
                 new GetHandler(httpContext => new UserController()
                 .Details(httpContext.UrlParameters["name"])));
-
         }
     }
 }

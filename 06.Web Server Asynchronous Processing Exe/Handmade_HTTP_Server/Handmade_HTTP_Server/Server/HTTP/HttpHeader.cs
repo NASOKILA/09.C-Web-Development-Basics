@@ -3,14 +3,10 @@ using System;
 
 namespace Handmade_HTTP_Server.Server.HTTP
 {
-
     public class HttpHeader
     {
-        //This class is responsible for keeping info about all the requests and responses
-
         public HttpHeader(string key, string value)
-        {
-            
+        {           
             CoreValidator.ThrowIfNullOrEmpty(key, nameof(key));
             CoreValidator.ThrowIfNullOrEmpty(value, nameof(value));
             

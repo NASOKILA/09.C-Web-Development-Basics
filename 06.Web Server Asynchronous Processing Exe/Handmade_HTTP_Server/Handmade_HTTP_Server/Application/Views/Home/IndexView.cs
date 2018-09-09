@@ -4,7 +4,6 @@
 
     public class IndexView : IView
     {
-        public string View() => "<h1>Welcome</h1>";
-        
+        public string View() => "<h1>Welcome</h1>";    
     }
 }

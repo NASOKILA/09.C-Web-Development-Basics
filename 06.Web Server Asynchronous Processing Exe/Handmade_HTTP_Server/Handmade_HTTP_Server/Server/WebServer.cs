@@ -11,7 +11,6 @@ namespace Handmade_HTTP_Server.Server
 
     public class WebServer : IRunnable
     {
-
         private const string localHostIpAddress = "127.0.0.1";
         private readonly int port;
         private readonly IServerRouteConfig serverRouteConfig;
@@ -34,10 +33,6 @@ namespace Handmade_HTTP_Server.Server
 
             Console.WriteLine($"Server running on port {localHostIpAddress}:{this.port}.");
 
-
-
-            //TUK HVURLQ GRESHKA PRI POST ZAQVKA AKO POLZVAME GOOGLE CHROME, NE ZNAM ZASHTO.
-            //MINI NA FIREFOX I NQMA DA GURMI.
             Task task = Task.Run(this.ListenLoop);
             task.Wait();
         }
@@ -51,8 +46,6 @@ namespace Handmade_HTTP_Server.Server
 
                 await connectionHandler.ProcessRequestAsync();
             }
-
         }
-
     }
 }

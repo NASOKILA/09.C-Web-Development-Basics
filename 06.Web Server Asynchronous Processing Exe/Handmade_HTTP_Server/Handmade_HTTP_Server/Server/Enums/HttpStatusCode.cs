@@ -1,6 +1,5 @@
 ﻿namespace Handmade_HTTP_Server.Server.Enums
-{
-    
+{    
     public enum HttpStatusCode
     {
         OK = 200,
