@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Notes</title>
+</head>
+<body>
+
+
+    <nav>
+        <ul>
+            <li>
+                <a href="/home/index">Home</a>
+            </li>
+            <li>
+                <a href="/home/about">About</a><br />
+            </li>
+            <li>
+                <a href="/users/all">Show all users</a><br />
+            </li>
+            
+            <div style="display: {{{loginRegisterDisplayType}}}">
+
+            <li>
+                <a href="/users/register">Regster</a>
+            </li>
+            <li>
+                <a href="/users/login">Login</a>
+            </li>
+            </div>
+        </ul>
+    </nav>
+
+
+    <img  width="200" src="https://softuni.bg/Files/UserFiles/ImageGallery/softuni-2.0.jpg" />
+    <br />
+
+    <div style="display: {{{displayType}}}">
+        <form action="Users/logout" method="post">
+            <input type="submit" value="Logout" />
+        </form>
+    </div>
+
+
+    {{{content}}}
+
+</body>
+</html>
