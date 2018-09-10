@@ -7,8 +7,7 @@
     {
         [HttpGet]
         public IActionResult Index()
-        {
-            
+        { 
             if (this.User.IsAuthenticated)
             {
                 this.Model["message"] = $"Welcome {this.User.Name}!";

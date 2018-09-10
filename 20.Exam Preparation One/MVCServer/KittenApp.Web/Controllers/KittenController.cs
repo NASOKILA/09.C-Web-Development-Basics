@@ -12,7 +12,6 @@
         [HttpGet]
         public IActionResult All()
         {
-            
             using (this.Context)
             {
                 var cats = Context.Kittens.ToList();

@@ -5,9 +5,7 @@
         private static MvcContext instance;
         private static readonly object instanceLock = new object();
         private MvcContext()
-        {
-            // This is going to be a singleton
-        }
+        { }
 
         public static MvcContext Get
         {
@@ -15,7 +13,6 @@
             {
                 if (instance == null) 
                 {
-                    // This achieves thread safety
                     lock (instanceLock)
                     {
                         if (instance == null)

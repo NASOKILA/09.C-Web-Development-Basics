@@ -1,5 +1,4 @@
-﻿
-namespace KittenApp.Web.BindingModels
+﻿namespace KittenApp.Web.BindingModels
 {
     using System.ComponentModel.DataAnnotations;
     

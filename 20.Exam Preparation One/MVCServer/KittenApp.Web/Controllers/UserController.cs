@@ -51,7 +51,6 @@
                 Password = PasswordUtilities.GenerateHash256(registerUserBindingModel.Password)
             };
 
-            //add user to db
             using (this.Context)
             {
                 if (Context.Users.Any(u => u.Email == registerUserBindingModel.Email))
@@ -98,7 +97,6 @@
                     return View();
                 }
 
-                //we add it to the session storage
                 this.SignIn(foundUser.Username);
                 this.User= new Authentication( foundUser.Username);
 

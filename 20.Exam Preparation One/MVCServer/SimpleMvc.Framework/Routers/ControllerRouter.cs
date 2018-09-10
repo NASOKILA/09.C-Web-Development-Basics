@@ -87,12 +87,10 @@
                 var param = parameterDescriptions[index];
                 if (param.ParameterType.IsPrimitive || param.ParameterType == typeof(string))
                 {
-                    // GET request -> primitive types only
                     parameters[index] = ProcessPrimitiveParameter(getParams, param);
                 }
                 else
                 {
-                    // POST request -> models
                     parameters[index] = ProcessBindingModelParameters(postParams, param);
                 }
             }

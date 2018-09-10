@@ -9,7 +9,7 @@
         public string Name { get; set; }
 
         [Required]
-        [Range(0, 20)] //we limit the age from 0 to 20 
+        [Range(0, 20)] 
         public int Age { get; set; }
 
         [Required]
