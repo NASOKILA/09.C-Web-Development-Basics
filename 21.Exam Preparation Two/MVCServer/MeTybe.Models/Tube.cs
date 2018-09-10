@@ -1,11 +1,9 @@
 ﻿namespace MeTybe.Models
 {
-
     using System.ComponentModel.DataAnnotations;
 
     public class Tube
     {
-
         public Tube()
         {
             this.Views = 0;

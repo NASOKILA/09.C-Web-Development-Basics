@@ -28,8 +28,6 @@
                     .Where(p => p != "").ToArray();
                 string folderPath = request.Path;
 
-                // The first part will always be empty, as it begins with '/'
-                // The second part may be either a controller path or a direct resource
                 if (resourcePath.Length > 2)
                 {
                     folderPath = resourcePath[2];

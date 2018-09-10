@@ -1,6 +1,5 @@
 ﻿namespace MeTupe.Web.Controllers
 {
-
     using BindingModels;
     using MeTupe.Web.Attributes;
     using MeTybe.Models;
@@ -24,8 +23,6 @@
         [HttpPost]
         public IActionResult Register(RegisterUserBindingModel registerUserBindingModel)
         {
-
-           
 
             if (registerUserBindingModel.Password == ""
                 || registerUserBindingModel.ConfirmPassword == ""
@@ -55,8 +52,6 @@
                 Password = PasswordUtilities.GenerateHash256(registerUserBindingModel.Password)
             };
             
-
-
             using (this.Context)
             {
                 if (Context.Users.Any(u => u.Email == registerUserBindingModel.Email))

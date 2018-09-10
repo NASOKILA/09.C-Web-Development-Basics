@@ -12,5 +12,4 @@
             return new RedirectResponse(message);
         }
     }
-    
 }

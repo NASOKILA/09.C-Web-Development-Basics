@@ -15,6 +15,5 @@ namespace SimpleMvc.Framework.ActionResults
         {
             return this.RedirectUrl;
         }
-
     }
 }

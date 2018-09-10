@@ -1,26 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>MeTube</title>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
+
 <body>
     <div class="container-fluid">
         <nav class="navbar navbar-toggleable-md navbar-dark bg-color-dark">
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <a class="navbar-brand h4" href="/">MeTube&trade;</a>
 
             <div class="collapse navbar-collapse justify-content-end row" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
-                    
-                    
-                    
+
                     <li style="display:{{{displayAnonymous}}}" class="nav-item active col-md-4">
                         <a class="nav-link h5" href="/">Home</a>
                     </li>
@@ -30,7 +29,6 @@
                     <li style="display:{{{displayAnonymous}}}" class="nav-item active col-md-4">
                         <a class="nav-link h5" href="/user/register">Register</a>
                     </li>
-                    
 
                     <li style="display:{{{displayLoggedIn}}}" class="nav-item active col-md-3">
                         <a class="nav-link h5" href="/">Home</a>
@@ -48,10 +46,7 @@
             </div>
         </nav>
 
-        <hr />
-
-        {{{content}}}
-
+        <hr /> {{{content}}}
 
         <hr class="my-3" />
         <footer class="footer py-3">
@@ -61,4 +56,5 @@
         </footer>
     </div>
 </body>
+
 </html>

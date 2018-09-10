@@ -10,7 +10,6 @@
 
         public DbSet<Tube> Tubes { get; set; }
 
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
@@ -39,9 +38,7 @@
                 .HasOne(t => t.Uploader)
                 .WithMany(u => u.Tubes);
 
-
             base.OnModelCreating(modelBuilder);
         }
-
     }
 }

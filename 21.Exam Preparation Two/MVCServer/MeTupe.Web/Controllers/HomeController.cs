@@ -61,12 +61,3 @@ namespace MeTupe.Web.Controllers
 
     }
 }
-
-
-/*                                <div>
-                                    <iframe width=""160"" height=""85"" 
-                                            src=""https://www.youtube.com/embed/{currentTube.YoutubeId}"" 
-                                            frameborder = ""0"" allowfullscreen>
-                                    </ iframe >
-                                </div>
-*/
